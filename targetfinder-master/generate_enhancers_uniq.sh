@@ -1,1 +1,0 @@
-for i in K562 GM12878 HUVEC HeLa-S3 NHEK IMR90; do cat ${i}/output-eep/pairs.csv | sed 's/, /-/g' | cut -d ',' -f 2,4,5,6,7,15 | tr ',' '\t'  | tail -n +2 | awk 'BEGIN{FS=OFS="\t"}$5==1{print $1,$4,$2,$6}' | sort -k1,1 -k2,2n -k3,3n | uniq > ${i}/output-eep/enhancers.uniq.bed; done
