@@ -29,3 +29,12 @@ This repository contains code to reproduce the results of the correspondence.
 
 ### Python scripts
 - `generate_window3.py`: Generate window regions as Bed3 format.
+
+### Cell line folders
+- `output-eep`: The data of EE/P datasets.
+- `output-epw`: The data of E/P/W datasets.
+
+    - `motifs`: Contains the files of Wang _et al_ motif occurrence scores in the window regions.
+    - `motifs_shuffled`: Contains the files of occurrence scores of shuffled motifs in the window regions.
+    
+       The occurrence scores are calculated by taking the sum of  matching scores of all occurrences of the motifs in a window region.
